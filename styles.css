@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    margin: 15% auto;
+    padding: 20px 0;
+    border: 1px solid #888;
+    width: 40%;
+    background-color: #fff;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: red;
+    background-color: yellow;
+}
+
+.content {
+    padding: 0 20px;
+}
+
+.titles, .currency {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.currency span {
+    padding: 5px 10px;
+    width: 65px;
+    font-weight: 400;
+    color: red;
+    border-radius: 10%;
+    background-color: #000;
+}
+
+.currency:last-child {
+    margin-bottom: 0px;
+}
+
