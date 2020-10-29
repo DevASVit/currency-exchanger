@@ -16,10 +16,28 @@
                     <p>ПРОДАЖ</p>
                 </div>
                 <div class="currency"><span id="usdBuy"></span>USD<span id="usdSale"></span></div>
-                <div class="currency"><span id="eurBuy"></span>EUR <span id="eurSale"></span></div>
+                <div class="currency"><span id="eurBuy"></span>EUR<span id="eurSale"></span></div>
                 <div class="currency"><span id="rubBuy"></span>RUB<span id="rubSale"></span></div>
+            </div>    
+            
+            <div>
+                <label for="currencySelect">Оберіть валюту:</label>
+                <select id="currencySelect">
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>RUB</option>
+                </select>
+
+                <input type="text" id="input-value" placeholder="Введіть необхідну суму">
+
+                <button id="buy">Купити</button>
+                <button id="sale">Продати</button>
+
+                <div id="result"></div>
             </div>
     </div>
+
+
 
     <script src="main.js"></script>
 </body>
