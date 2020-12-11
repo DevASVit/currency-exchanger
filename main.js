@@ -31,24 +31,29 @@ rubBuy.innerText = rubBuyCalculation.toFixed(2);
 rubSale.innerText = rubSaleCalculation.toFixed(2);
 
 buy.onclick = () => {
-    const n = document.getElementById('currencySelect').options.selectedIndex;
-    const sel = document.getElementById('currencySelect').options[n].text;
-    const val = document.getElementById('input-value').value;
-    setResultBuy(sel, val);
+    const numberOption = document.getElementById('currencySelect').options.selectedIndex;
+
+    const selectedCurrency = document.getElementById('currencySelect').options[numberOption].text;
+
+    const needAmountMoney = document.getElementById('input-value').value;
+    console.log(needAmountMoney);
+
+    setResultBuy(selectedCurrency, needAmountMoney);
+    document.getElementById('result').style.color = "red";
 }
 
-setResultBuy = (sel, val) => {
+setResultBuy = (selectedCurrency, needAmountMoney) => {
     let result;
 
-    switch (sel) {
+    switch (selectedCurrency) {
         case "USD": 
-            result = val * usdBuyCalculation;
+            result = needAmountMoney * usdBuyCalculation;
             break;
         case "EUR": 
-            result = val * eurBuyCalculation;
+            result = needAmountMoney * eurBuyCalculation;
             break;
         case "RUB": 
-            result = val * rubBuyCalculation;
+            result = needAmountMoney * rubBuyCalculation;
             break;   
     }
 
@@ -56,24 +61,25 @@ setResultBuy = (sel, val) => {
 }
 
 sale.onclick = () => {
-    const n = document.getElementById('currencySelect').options.selectedIndex;
-    const sel = document.getElementById('currencySelect').options[n].text;
-    const val = document.getElementById('input-value').value;
-    setResultSale(sel, val);
+    const numberOption = document.getElementById('currencySelect').options.selectedIndex;
+    const selectedCurrency = document.getElementById('currencySelect').options[numberOption].text;
+    const needAmountMoney = document.getElementById('input-value').value;
+    setResultSale(selectedCurrency, needAmountMoney);
+    document.getElementById('result').style.color = "red";
 }
 
-setResultSale = (sel, val) => {
+setResultSale = (selectedCurrency, needAmountMoney) => {
     let result;
     
-    switch (sel) {
+    switch (selectedCurrency) {
         case "USD": 
-            result = val * usdSaleCalculation;
+            result = needAmountMoney * usdSaleCalculation;
             break;
         case "EUR": 
-            result = val * eurSaleCalculation;
+            result = needAmountMoney * eurSaleCalculation;
             break;
         case "RUB": 
-            result = val * rubSaleCalculation;
+            result = needAmountMoney * rubSaleCalculation;
             break;   
     }
 
