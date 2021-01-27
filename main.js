@@ -30,12 +30,19 @@ eurSale.innerText = eurSaleCalculation.toFixed(2);
 rubBuy.innerText = rubBuyCalculation.toFixed(2);
 rubSale.innerText = rubSaleCalculation.toFixed(2);
 
+const reg = /[^0-9]/,
+inpNeedAmountMoney = document.getElementById('input-value');
+
+inpNeedAmountMoney.addEventListener('input', function(e) {
+  e.target.value = e.target.value.replace(reg, '');
+});
+
 buy.onclick = () => {
     const numberOption = document.getElementById('currencySelect').options.selectedIndex;
 
     const selectedCurrency = document.getElementById('currencySelect').options[numberOption].text;
 
-    const needAmountMoney = document.getElementById('input-value').value;
+    const needAmountMoney = inpNeedAmountMoney.value;
 
     setResultBuy(selectedCurrency, needAmountMoney);
     document.getElementById('result').style.color = "red";
