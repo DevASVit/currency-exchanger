@@ -92,6 +92,10 @@ input[type="number"]::placeholder {
     color: gray;
 }
 
+input[type="number"]::-webkit-inner-spin-button { 
+    opacity: 1;
+  }
+
 #result {
     margin-bottom: 0;
     font-size: 14px; 

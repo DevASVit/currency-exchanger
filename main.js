@@ -36,7 +36,6 @@ buy.onclick = () => {
     const selectedCurrency = document.getElementById('currencySelect').options[numberOption].text;
 
     const needAmountMoney = document.getElementById('input-value').value;
-    console.log(needAmountMoney);
 
     setResultBuy(selectedCurrency, needAmountMoney);
     document.getElementById('result').style.color = "red";
